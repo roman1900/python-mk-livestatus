@@ -47,6 +47,14 @@ class Query(object):
     def negate(self):
         self._lqstring += f"\nNegate:"
         return self
+    
+    def oring(self,num):
+        self._lqstring += f"\nOr: {num}"
+        return self
+
+    def anding(self,num):
+        self._lqstring += f"\nAnd: {num}"
+        return self
 
 class Socket(object):
     def __init__(self, peer):
