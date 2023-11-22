@@ -44,6 +44,9 @@ class Query(object):
         self._lqstring += f"\nFilter: {filter_str}"
         return self
 
+    def negate(self):
+        self._lqstring += f"\nNegate:"
+        return self
 
 class Socket(object):
     def __init__(self, peer):
