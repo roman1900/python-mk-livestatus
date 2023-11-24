@@ -55,6 +55,10 @@ class Query(object):
     def anding(self,num):
         self._lqstring += f"\nAnd: {num}"
         return self
+    
+    def limit(self,num):
+        self._lqstring += f"\nLimit: {num}"
+        return self
 
 class Socket(object):
     def __init__(self, peer):
